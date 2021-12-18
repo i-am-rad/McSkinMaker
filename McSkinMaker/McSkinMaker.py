@@ -75,6 +75,7 @@ def check_if_blank():
         path_function(file_name)
         rename_skin()
 
+
 # Reusable function to display a filepath in different ways.
 # This is important for Minecraft mcpack files because file names are used in various ways in the JSON and LANG files
 def path_function(fp):
