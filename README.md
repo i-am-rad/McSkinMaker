@@ -1,10 +1,13 @@
 # McSkinMaker
 Convert Minecraft PNG to mcpack file
 
-Design you Minecraft skin on Tynker or other websites, and then download the PNG image. 
+Use custom skins in Minecraft Education Edition
+
+Design your Minecraft skin on Tynker or other websites, and then download the PNG image. 
 Use McSkinMaker to convert the PNG to the Minecraft mcpack format.
 This project was documented to help teach students some basic python tasks.
-It is GNU3 licensed so you can modify/re-factor/re-purpose as an individual or if you wish to teach it to a class
+It is GNU3 licensed so you can modify/re-factor/re-purpose as an individual or if you wish to teach it to a class.
+This was confirmed to work with Minecraft Education Edition Version 1.17.31
 
 
 EXE File:
