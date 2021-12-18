@@ -12,7 +12,7 @@ import uuid
 # All mentions of "Minecraft" are copyright and trademark of Microsoft
 # The intent of this program is to teach and explain how Python can be used to solve simple problems.
 # This program takes a Minecraft PNG image designed on Tynker, or other sites, and converts it to a mcpack file
-# ***GNU LICENSING***
+# ***GPL3 LICENSING***
 # This program is free software: you can redistribute it and/or modify it under the terms of the GNU General
 # Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option)
 # any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without
@@ -30,7 +30,7 @@ gui.title('McSkinMaker')
 gui.resizable(False, False)
 gui.geometry('600x300')
 gui['bg'] = '#DAF7A6'
-Label(gui, text=f'McSkinMaker - Convert PNG to mcpack. \n©Jacob Radcliffe, GNU3', pady=20, bg='#ffbf00').pack()
+Label(gui, text=f'McSkinMaker - Convert PNG to mcpack. \n©Jacob Radcliffe, GPL3', pady=20, bg='#ffbf00').pack()
 
 # set global file path variables
 file_name = "blank"
