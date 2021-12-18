@@ -12,7 +12,7 @@ import uuid
 # All mentions of "Minecraft" are copyright and trademark of Microsoft
 # The intent of this program is to teach and explain how Python can be used to solve simple problems.
 # This program takes a Minecraft PNG image designed on Tynker, or other sites, and converts it to a mcpack file
-# ***GNU LICENSING***
+# ***GPL3 LICENSING***
 # This program is free software: you can redistribute it and/or modify it under the terms of the GNU General
 # Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option)
 # any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without
@@ -30,7 +30,7 @@ gui.title('McSkinMaker')
 gui.resizable(False, False)
 gui.geometry('600x300')
 gui['bg'] = '#DAF7A6'
-Label(gui, text=f'McSkinMaker - Convert PNG to mcpack. \n©Jacob Radcliffe, GNU3', pady=20, bg='#ffbf00').pack()
+Label(gui, text=f'McSkinMaker - Convert PNG to mcpack. \n©Jacob Radcliffe, GPL3', pady=20, bg='#ffbf00').pack()
 
 # set global file path variables
 file_name = "blank"
@@ -46,7 +46,7 @@ skin_name = "blank"
 open_button = ttk.Button(
     gui,
     text='Open a Minecraft Image File',
-    command=lambda: [select_file(), rename_skin()]
+    command=lambda: [select_file(), check_if_blank()]
 )
 
 # Attaching the open button to the top-level gui window
@@ -66,8 +66,14 @@ def select_file():
         initialdir='/',
         filetypes=filetypes
     )
-    path_function(file_name)
 
+
+def check_if_blank():
+    if file_name == "":
+        gui.destroy()
+    else:
+        path_function(file_name)
+        rename_skin()
 
 # Reusable function to display a filepath in different ways.
 # This is important for Minecraft mcpack files because file names are used in various ways in the JSON and LANG files
@@ -84,6 +90,7 @@ def path_function(fp):
 
 # Rename the file yes/no window. "if" which defaults to true is the "yes" button. "else" = false is the "no" button
 def rename_skin():
+
     skin_msg = "Make sure your skin name is short!" + "\nSkin Name Is: " + skin_name + "\nRename it?"
     answer = messagebox.askyesno("Skin Name", skin_msg)
     if answer:
