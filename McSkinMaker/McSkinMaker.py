@@ -28,7 +28,7 @@ gui.title('McSkinMaker')
 
 # Dimensions and Colors of Our GUI
 gui.resizable(False, False)
-gui.geometry('600x300')
+gui.geometry('600x400')
 gui['bg'] = '#DAF7A6'
 Label(gui, text=f'McSkinMaker - Convert PNG to mcpack. \n©Jacob Radcliffe, GPL3', pady=20, bg='#ffbf00').pack()
 
